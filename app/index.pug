@@ -1,0 +1,44 @@
+html
+	head
+		link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+		link(rel='stylesheet' href='https://fonts.googleapis.com/css?family=Josefin+Sans|Montserrat|Lato|Noto+Sans|Open+Sans|Source+Sans+Pro')
+		//link(rel='stylesheet' href='/css/viewer.css')
+
+		link(rel='stylesheet' href='/css/index.css')
+
+		//-Base for UI router development
+		base(href='http://localhost:8008')
+		
+	//-Girl look at that
+	body(ng-app='app')
+
+		//-App goes here :)
+		div(ui-view='root')
+
+		//************ Scripts ************//
+
+		//-Angular & Router
+		script(src='https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js')
+		script(src="https://unpkg.com/angular-ui-router@1.0.0-beta.3/release/angular-ui-router.js")
+
+		//-Lodash
+		script(src='https://cdn.jsdelivr.net/lodash/4.17.4/lodash.min.js')
+
+		//-Third-party libraries
+		script(src='/lib/routerLogger/routerLogger.js')
+		script(src='/lib/breadcrumb/breadcrumb.js')
+
+		//-Angular app
+		script(src='/app.js')
+
+		//-Services
+		script(src='/services/projectService.js')
+		script(src='/services/organizationService.js')
+		script(src='/services/userService.js')
+
+		//-Components
+		script(src='/components/root/root.js')
+		script(src='/components/root/home.js')
+		script(src='/components/project/project.js')
+		script(src='/components/projects/projects.js')
+		script(src='/components/organization/organization.js')
