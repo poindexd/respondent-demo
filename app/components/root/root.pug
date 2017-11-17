@@ -11,7 +11,7 @@
 		li(ng-repeat='project in getProjects(organization.$id) track by $index')
 			a.indent-pad-2(
 				ui-sref-active='active'
-				ui-sref='root.organization.projects.project({projectId: project.$id})'
+				ui-sref='root.organization.projects.project({organizationId: organization.$id, projectId: project.$id})'
 			) {{project.name}}
 
 
