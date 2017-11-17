@@ -1,2 +1,108 @@
-.content.container
-	h1 Here is a {{project.name}}
+.content
+
+	.row.grey.lighten-3.pad
+		.inline
+			h3 {{project.name}}
+		.inline.indent(style='padding:30px;')
+			.chip.white-text(ng-class='project.status.color') {{project.status.text}}
+		.right(style='margin-top: 24px')
+			.btn-flat calendar
+				i.material-icons.left event
+			.btn-flat settings
+				i.material-icons.left settings
+
+	.row.pad
+		.col.s3
+			h5 Screened
+				.right.grey-text 2
+
+			.card
+				.collection: .collection-item.avatar
+					img.circle(src='{{users[0].image}}')
+					.title {{users[0].name}}
+					p Jersey City, New Jersey
+				.row.pad
+					a.left Reject
+						i.material-icons.left.red-text close
+					a.right Accept
+						i.material-icons.right.green-text arrow_right
+			.card
+				.collection: .collection-item.avatar
+					img.circle(src='{{users[1].image}}')
+					.title {{users[1].name}}
+					p Seattle, Washington
+				.row.pad
+					a.left Reject
+						i.material-icons.left.red-text close
+					a.right Accept
+						i.material-icons.right.green-text arrow_right
+			.card
+				.collection: .collection-item.avatar
+					img.circle(src='{{users[5].image}}')
+					.title {{users[5].name}}
+					p Seattle, Washington
+				.row.pad
+					a.left Reject
+						i.material-icons.left.red-text close
+					a.right Accept
+						i.material-icons.right.green-text arrow_right
+
+		.col.s3
+			h5 Qualified
+				.right.grey-text 1
+
+			.card
+				.collection: .collection-item.avatar
+					img.circle(src='{{users[2].image}}')
+					.title {{users[2].name}}
+					p Orlando, Florida
+				.row.pad
+					a.left Reject
+						i.material-icons.left.red-text close
+					a.right Schedule
+						i.material-icons.right.green-text arrow_right
+			.card
+				.collection: .collection-item.avatar
+					img.circle(src='{{users[6].image}}')
+					.title {{users[6].name}}
+					p Orlando, Florida
+				.row.pad
+					a.left Reject
+						i.material-icons.left.red-text close
+					a.right Schedule
+						i.material-icons.right.green-text arrow_right
+
+
+		.col.s3
+			h5 Scheduled
+				.right.grey-text 1
+
+			.card
+				.collection: .collection-item.avatar
+					img.circle(src='{{users[3].image}}')
+					.title {{users[3].name}}
+					p Los Angelos, California
+				.row
+					p Scheduled for Tuesday, November 21
+						i(style='margin-left:20px').material-icons.left.grey-text info
+
+				.row.pad
+					a.left Reschedule
+						i.material-icons.left.red-text timer
+					a.right Attended
+						i.material-icons.right.green-text arrow_right
+
+		.col.s3
+			h5 Attended
+				.right.grey-text 1
+
+			.card
+				.collection: .collection-item.avatar
+					img.circle(src='{{users[4].image}}')
+					.title {{users[4].name}}
+					p St. Paul, Minnesota
+				.row.pad
+					a.left Did not attend
+						i.material-icons.left.red-text close
+					a.right Pay
+						i.material-icons.right.green-text arrow_right

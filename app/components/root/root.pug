@@ -9,10 +9,12 @@
 		li: a.indent-pad-1.white-text(ui-sref-active-eq='active' ui-sref='root.organization.projects({organizationId: organization.$id})' style='font-size:18px;') Projects
 
 		li(ng-repeat='project in getProjects(organization.$id) track by $index')
-			a.indent-pad-2(
+			a(
 				ui-sref-active='active'
 				ui-sref='root.organization.projects.project({organizationId: organization.$id, projectId: project.$id})'
-			) {{project.name}}
+			)
+				.inline.circle(ng-class='project.status.color' style='height: 12px; width: 12px; margin: 18px')
+				.inline {{project.name}}
 
 
 //-Everything to the right of the sidenav
